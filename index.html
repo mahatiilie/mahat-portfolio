@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahat Ali - Frontend Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --navy:#082A3F;
+            --aqua:#2E9CB5;
+            --orange:#D9762B;
+            --white:#ffffff;
+            --gray:#f5f5f5;
+            --shadow:0 10px 30px rgba(0,0,0,.12);
+        }
+        *{ margin:0; padding:0; box-sizing:border-box; }
+        body{ font-family:'Inter',sans-serif; background:var(--white); color:#222; line-height:1.6; }
+        .container{ width:90%; max-width:1100px; margin:auto; }
+
+        /* HEADER */
+        header{ background:var(--navy); padding:18px 0; position:fixed; width:100%; top:0; z-index:1000; }
+        header .container{ display:flex; justify-content:space-between; align-items:center; }
+        .logo{ color:white; font-family:'Space Grotesk',sans-serif; font-size:1.5rem; font-weight:700; }
+        nav a{ color:white; text-decoration:none; margin-left:25px; font-weight:500; transition:.3s; }
+        nav a:hover{ color:var(--aqua); }
+
+        /* HERO */
+        .hero{ min-height:100vh; background:linear-gradient(135deg,var(--navy),#083408); display:flex; align-items:center; color:white; padding-top:80px; }
+        .hero h1{ font-family:'Space Grotesk',sans-serif; font-size:3rem; margin-bottom:15px; }
+        .hero h1 span{ color:var(--aqua); }
+        .hero p{ font-size:1.1rem; margin-bottom:30px; max-width:600px; }
+        .hero-buttons{ display:flex; gap:15px; flex-wrap:wrap; }
+        .btn-primary{ background:var(--orange); color:white; padding:14px 28px; border-radius:8px; text-decoration:none; font-weight:600; }
+        .btn-secondary{ background:var(--aqua); color:white; padding:14px 28px; border-radius:8px; text-decoration:none; font-weight:600; }
+
+        /* SECTIONS */
+        section{ padding:90px 0; }
+        section h2{ font-family:'Space Grotesk',sans-serif; font-size:2.2rem; text-align:center; margin-bottom:50px; color:var(--navy); }
+
+        /* ABOUT */
+        #about{ background:var(--gray); }
+        .about-content{ max-width:700px; margin:auto; text-align:center; font-size:1.05rem; line-height:1.9; }
+
+        /* SKILLS */
+        .skills-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:20px; }
+        .skill-card{ background:var(--navy); color:white; text-align:center; padding:30px 20px; border-radius:12px; font-family:'Space Grotesk',sans-serif; font-size:1.1rem; font-weight:600; transition:.3s; }
+        .skill-card:hover{ background:var(--aqua); transform:translateY(-5px); }
+
+        /* PROJECTS */
+        #projects{ background:var(--gray); }
+        .projects-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:25px; }
+        .project-card{ background:white; border-radius:15px; padding:30px; box-shadow:var(--shadow); transition:.3s; }
+        .project-card:hover{ transform:translateY(-8px); }
+        .project-card h3{ color:var(--navy); margin-bottom:10px; font-family:'Space Grotesk',sans-serif; }
+        .project-card p{ margin-bottom:20px; color:#555; }
+        .project-links{ display:flex; gap:10px; }
+        .project-links a{ padding:8px 18px; border-radius:8px; text-decoration:none; font-weight:600; font-size:0.9rem; }
+        .live-btn{ background:var(--orange); color:white; }
+        .code-btn{ background:var(--navy); color:white; }
+
+        /* CONTACT */
+        .contact-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
+        .contact-card{ background:var(--navy); color:rgb(155, 167, 176); text-align:center; padding:30px; border-radius:12px; }
+        .contact-card a{ color:var(--aqua); text-decoration:none; font-weight:600; }
+
+        /* FOOTER */
+        footer{ background:var(--navy); color:white; text-align:center; padding:30px; }
+
+        /* MOBILE */
+        @media(max-width:768px){
+            .hero h1{ font-size:2rem; }
+            nav{ display:none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">Mahat Ali</div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Hi, I'm <span>Mahat Ali</span> 👋</h1>
+            <h1 style="font-size:1.8rem; margin-bottom:20px; font-weight:400;">Frontend Developer from East Africa</h1>
+            <p>I build clean, responsive websites using HTML, CSS and JavaScript. I am a problem solver who turns ideas into real digital products.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary">View My Work</a>
+                <a href="#contact" class="btn-secondary">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I am Mahat Ali Ilie, a passionate Frontend Developer from East Africa. I specialize in building clean, responsive websites using HTML, CSS and JavaScript. I am a problem solver who turns ideas into real digital products — from business websites to personal projects. I am currently growing my skills in Git and GitHub and looking for opportunities to create value through code.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">HTML</div>
+                <div class="skill-card">CSS</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">Git</div>
+                <div class="skill-card">GitHub</div>
+                <div class="skill-card">Responsive Design</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <h3>DHIBLAWE Water Bowser</h3>
+                    <p>A professional water delivery business website with pricing, FAQ, testimonials, Google Maps and WhatsApp integration.</p>
+                    <div class="project-links">
+                        <a href="https://mahatiilie.github.io/dhiblawe-clean-water/" target="_blank" class="live-btn">Live Site</a>
+                        <a href="https://github.com/mahatiilie/dhiblawe-clean-water" target="_blank" class="code-btn">GitHub</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Email</h3>
+                    <a href="mailto:mahataliiilie@gmail.com">mahataliiilie@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <h3>Phone / WhatsApp</h3>
+                    <a href="https://wa.me/254799989129">0799 989129</a>
+                </div>
+                <div class="contact-card">
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/mahatiilie" target="_blank">github.com/mahatiilie</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Mahat Ali Ilie — Frontend Developer</p>
+    </footer>
+
+</body>
+</html>
